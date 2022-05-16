@@ -19,6 +19,6 @@ imageLink:"https://th.bing.com/th/id/R.77064801323f39fef3d817184e8ff23b?rik=4sSR
 hashtag:["best Place","high visitors"]
 
 
-    }
+    };
   }
 }
