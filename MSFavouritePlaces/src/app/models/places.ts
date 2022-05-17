@@ -1,4 +1,4 @@
-export interface Content {
+export interface Places {
     readonly id: number;
     placeName : string;
     Country: string;

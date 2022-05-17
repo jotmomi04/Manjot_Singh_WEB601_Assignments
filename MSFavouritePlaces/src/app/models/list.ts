@@ -1,21 +1,26 @@
-import {Content} from "./content";
+import { Places } from "./places";
 
-export class ContentList {
-  static contentCount = 0;
-  private _places: Content[];
-  constructor(place: Content) {
-    this._places = []; // initialize array
-    this._places[0] = place; // set the value of the item at the first index of the array
-    this.increaseCount();
-  }
-  get items():Content[] {
-    return this._places;
-    
-  }
+export class List {
+    static contentCount = 0;
+    private _places: Places[];
+    constructor() {
+      this._places = []; // initialize array
+      this.increaseCount();
+     
+    }
+    get items():Places[] {
+      return this._places;}
+      
+      increaseCount() {
+        return ++List.contentCount;
+      }
+      addContent(newPlace: Places): void {  
+        this._places.push(newPlace);    
+    }
 
-  increaseCount() {
-    return ++ContentList.contentCount;
+    amount(): number {
+        return this._places.length;    
+    }
 
-  }
 
 }
