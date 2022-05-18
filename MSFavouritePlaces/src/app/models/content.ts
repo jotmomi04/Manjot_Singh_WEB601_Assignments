@@ -1,6 +1,6 @@
 export interface Content {
 
-  readonly id: number;
+   id: number;
   placeName : string;
   Country: string;
   Rank: number;

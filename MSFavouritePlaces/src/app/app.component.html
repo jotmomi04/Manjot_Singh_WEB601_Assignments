@@ -1,0 +1,21 @@
+{{title}}
+<table >
+  <tr>
+  <td>ID </td>
+  <td>Place </td>
+  <td>Country </td>
+  <td>Rank </td>
+  <td>Description</td>
+  <td>Tags</td>
+  </tr>
+  <tr *ngFor="let data of Place">
+
+    <td>{{data.id}}</td>
+    <td>{{data.placeName}}</td>
+    <td>{{data.Country}}</td>
+    <td>{{data.Rank}}</td>
+    <td>{{data.discription}}</td>
+    <td>{{data.hashtag}}</td>
+    <td><img ></td>
+  </tr>
+</table>
