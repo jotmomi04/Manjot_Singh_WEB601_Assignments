@@ -1,5 +1,7 @@
 {{title}}
+<div class="container">
 <table >
+  <thead>
   <tr>
   <td>ID </td>
   <td>Place </td>
@@ -7,7 +9,10 @@
   <td>Rank </td>
   <td>Description</td>
   <td>Tags</td>
+    <td>Image</td>
   </tr>
+  </thead>
+  <tbody>
   <tr *ngFor="let data of Place">
 
     <td>{{data.id}}</td>
@@ -16,6 +21,8 @@
     <td>{{data.Rank}}</td>
     <td>{{data.discription}}</td>
     <td>{{data.hashtag}}</td>
-    <td><img ></td>
+    <td><img src="{{data.imageLink}}"/></td>
   </tr>
+  </tbody>
 </table>
+</div>
