@@ -29,7 +29,7 @@ export class AppComponent {
       Country: "India",
       Rank: 1,
       discription: "Good plce",
-      imageLink: "https://th.bing.com/th/id/R.77064801323f39fef3d817184e8ff23b?rik=4sSRBA3z3%2fX7iw&pid=ImgRaw&r=0",
+      imageLink: "https://www.bing.com/th?id=OIP.kcoOW-3r-CuUHfZE06ZNwwHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2",
       hashtag: ["best Place", "high visitors"]},
       { id: 4,
         placeName: "Venice",
