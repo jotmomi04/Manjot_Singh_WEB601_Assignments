@@ -10,12 +10,10 @@ export class ContentList {
   }
   get items():Content[] {
     return this._places;
-    
   }
 
   increaseCount() {
     return ++ContentList.contentCount;
-
   }
 
 }
