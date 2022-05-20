@@ -1,1 +1,27 @@
-<p>content-card works!</p>
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <td>ID </td>
+                <td>Place </td>
+                <td>Country </td>
+                <td>Rank </td>
+                <td>Description</td>
+                <td>Tags</td>
+                <td>Image</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+                <td>{{contentItem?.id}}</td>
+                <td>{{contentItem?.placeName}}</td>
+                <td>{{contentItem?.Country}}</td>
+                <td>{{contentItem?.Rank}}</td>
+                <td>{{contentItem?.discription}}</td>
+                <td>{{contentItem?.hashtag}}</td>
+                <td><img src="{{contentItem?.imageLink}}" /></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
