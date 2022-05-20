@@ -1,28 +1,17 @@
-{{title}}
-<div class="container">
-<table >
-  <thead>
-  <tr>
-  <td>ID </td>
-  <td>Place </td>
-  <td>Country </td>
-  <td>Rank </td>
-  <td>Description</td>
-  <td>Tags</td>
-    <td>Image</td>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let data of Place">
+<h1>{{title}}</h1>
+<table>
 
-    <td>{{data.id}}</td>
-    <td>{{data.placeName}}</td>
-    <td>{{data.Country}}</td>
-    <td>{{data.Rank}}</td>
-    <td>{{data.discription}}</td>
-    <td>{{data.hashtag}}</td>
-    <td><img src="{{data.imageLink}}"/></td>
-  </tr>
-  </tbody>
+    <tr>
+        <th>ID</th>
+        <th>Name of Place</th>
+        <th>Country</th>
+        <th>Rank</th>
+        <th>Description</th>
+        <th>Tags</th>
+        <th>Image</th>
+    </tr>
+    <tr [innerHTML]="myList.displayPlace(0)"></tr>
+    <tr [innerHTML]="myList.displayPlace(1)"></tr>
+    <tr [innerHTML]="myList.displayPlace(2)"></tr>
+    <tr [innerHTML]="myList.displayPlace(3)"></tr>
 </table>
-</div>
