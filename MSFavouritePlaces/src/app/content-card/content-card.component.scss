@@ -3,6 +3,15 @@ img {
     height: 200px;
 }
 
-.card {
+:host.odd {
+    background-color: rgb(222, 217, 217);
+}
+
+:host {
+    display: block;
     width: 250px;
+    text-align: center;
+    margin: 8px auto;
+    border: 2px solid #000;
+    padding: 8px;
 }

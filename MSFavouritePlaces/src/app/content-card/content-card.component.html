@@ -1,9 +1,8 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 <div class="card">
-    <img src="{{contentItem?.imageLink}}" class="card-img-top" alt="...">
+    <img *ngIf="contentItem" src="{{contentItem?.imageLink}}" class="card-img-top" alt="...">
     <div class="card-body">
-        <h5 class="card-title">{{contentItem?.placeName}}({{contentItem?.Country}})</h5>
-        <p class="card-text ">{{contentItem?.discription}}.</p>
-        <p class="card-text"><small class="text-muted">{{contentItem?.hashtag}}</small></p>
+        <h5 class="card-title"> <strong>Place :</strong> {{contentItem?.placeName}}({{contentItem?.Country}})</h5>
+        <p *ngIf="contentItem" class="card-text "><strong> Description :</strong> {{contentItem?.discription}}.</p>
+        <p *ngIf="contentItem" class="card-text"><small class="text-muted"># {{contentItem?.hashtag}}</small></p>
     </div>
 </div>
