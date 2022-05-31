@@ -3,7 +3,7 @@ export interface Content {
    id: number;
   placeName : string;
   Country: string;
-  Rank: number;
+  Type?:string;
   discription?:string;
   imageLink?:string;
   hashtag?:string[];

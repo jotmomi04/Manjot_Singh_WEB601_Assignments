@@ -3,6 +3,8 @@
     <div class="card-body">
         <h5 class="card-title"> <strong>Place :</strong> {{contentItem?.placeName}}({{contentItem?.Country}})</h5>
         <p *ngIf="contentItem" class="card-text "><strong> Description :</strong> {{contentItem?.discription}}.</p>
+        <p><em>Type: {{contentItem?.Type}}</em></p>
         <p *ngIf="contentItem" class="card-text"><small class="text-muted"># {{contentItem?.hashtag}}</small></p>
     </div>
+
 </div>

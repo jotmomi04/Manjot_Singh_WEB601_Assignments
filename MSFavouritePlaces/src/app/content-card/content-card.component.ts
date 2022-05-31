@@ -11,7 +11,7 @@ export class ContentCardComponent implements OnInit {
 @Input() contentItem?: Content;
   constructor() { }
 consoleMethod(){
-console.log("ID :"+ this.contentItem?.id + "Rank :" + this.contentItem?.Rank)
+console.log("ID :"+ this.contentItem?.id + "Rank :" + this.contentItem?.Type)
 }
   ngOnInit(): void {
   }
