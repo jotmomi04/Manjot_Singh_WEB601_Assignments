@@ -7,6 +7,16 @@ img {
     background-color: rgb(222, 217, 217);
 }
 
+:host.water {
+    background-color: black;
+    color: green
+}
+
+:host.building {
+    background-color: green;
+    color: grey
+}
+
 :host {
     display: block;
     width: 250px;
