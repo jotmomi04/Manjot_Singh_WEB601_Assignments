@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Content } from '../models/content';
 
@@ -8,7 +9,30 @@ import { Content } from '../models/content';
 })
 export class ContentListComponent implements OnInit {
 places:Content[];
-  constructor() {
+authorNotFound="";   // i dont have author in my list so i use country  
+authorFound="";
+hasValue:boolean = false;
+checkAuthor(val:string){
+  console.log(val)
+this.places.forEach(m=>{
+if(m.Country == val){ this.hasValue=true
+  }
+ 
+})
+
+if(this.hasValue){
+  this.authorFound=val +" Has found in List"
+  this.authorNotFound=""
+}
+else{
+  this.authorNotFound = val + " is not Found in List"
+  this.authorFound =""
+}
+this.hasValue=false
+}
+
+
+constructor() {
     this.places=[{
       id: 1,
       placeName: "Nigra Falls",

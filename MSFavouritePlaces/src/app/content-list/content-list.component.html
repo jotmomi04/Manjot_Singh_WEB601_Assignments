@@ -1,3 +1,7 @@
+<div class="search"><input #check type="text" placeholder="Enter author name here" name="authorname">
+    <button (click)="checkAuthor(check.value)">Go</button></div>
+<p [ngStyle]="{'color':'grey','text-align':'center'}" *ngIf="authorNotFound">{{authorNotFound}} </p>
+<p [ngStyle]="{'color':'green','text-align':'center'}" *ngIf="authorFound">{{authorFound}} </p>
 <h1>Filter By : Water</h1>
 <app-content-card *ngFor="let item of (places|filterContent:'Water') ;index as i;" [contentItem]="item" [ngStyle]="{'color':'green','background-color':'black'}">
 
