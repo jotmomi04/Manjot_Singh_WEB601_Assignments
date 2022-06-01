@@ -1,13 +1,15 @@
-<div class="search"><input #check type="text" placeholder="Enter author name here" name="authorname">
+<p style='text-align:center'>Note: Author is not in My list so I use Country : Canada, India, Italy</p>
+<div class="search"><input #check type="text" placeholder="Enter Country name here" name="authorname">
     <button (click)="checkAuthor(check.value)">Go</button></div>
 <p [ngStyle]="{'color':'grey','text-align':'center'}" *ngIf="authorNotFound">{{authorNotFound}} </p>
 <p [ngStyle]="{'color':'green','text-align':'center'}" *ngIf="authorFound">{{authorFound}} </p>
 <h1>Filter By : Water</h1>
-<app-content-card *ngFor="let item of (places|filterContent:'Water') ;index as i;" [contentItem]="item" [ngStyle]="{'color':'green','background-color':'black'}">
+<app-content-card *ngFor="let item of (places|filterContent:'Water') ;index as i;" [contentItem]="item" [class.water]="i+1">
 
 </app-content-card>
+
 <h1>Filter By : Buildings</h1>
-<app-content-card *ngFor="let item of (places|filterContent:'Building') ;index as i;" [contentItem]="item" [ngStyle]="{'color':'grey','background-color':'green'}">
+<app-content-card *ngFor="let item of (places|filterContent:'Building') ;index as i;" [contentItem]="item" [class.building]="i+1">
 </app-content-card>
 
 <h1>Filter By : No Type</h1>

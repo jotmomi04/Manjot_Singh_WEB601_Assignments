@@ -1,4 +1,4 @@
-<div class="card">
+<div [class.find]="hasValue" class="card">
     <img *ngIf="contentItem" src="{{contentItem?.imageLink}}" class="card-img-top" (click)="consoleMethod()" alt="...">
     <div class="card-body">
         <h5 class="card-title"> <strong>Place :</strong> {{contentItem?.placeName}}({{contentItem?.Country}})</h5>
