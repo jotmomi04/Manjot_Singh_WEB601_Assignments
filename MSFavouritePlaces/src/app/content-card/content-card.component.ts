@@ -13,6 +13,7 @@ export class ContentCardComponent implements OnInit {
 consoleMethod(){
 console.log("ID :"+ this.contentItem?.id + "Rank :" + this.contentItem?.Type)
 }
+
   ngOnInit(): void {
   }
  
