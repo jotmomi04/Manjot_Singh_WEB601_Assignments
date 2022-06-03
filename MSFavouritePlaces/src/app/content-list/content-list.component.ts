@@ -47,7 +47,7 @@ constructor() {
       Country: "India",
       Type:"Building",
       discription: "The Taj Mahal, is an ivory-white marble mausoleum on the right bank of the river Yamuna in the Indian city of Agra",
-      imageLink: "https://th.bing.com/th/id/OIP.C1bH6nhDixeoOvELYZW4XQHaFP?w=255&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"
+      imageLink: ""
       ,  hashtag: ["best Place", "high visitors"]
     },{ id: 3,
       placeName: "Harmandir Sahib",

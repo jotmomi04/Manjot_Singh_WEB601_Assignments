@@ -1,5 +1,9 @@
 <div class="card">
-    <img *ngIf="contentItem" src="{{contentItem?.imageLink}}" class="card-img-top" (click)="consoleMethod()" alt="...">
+    <div [ngSwitch]="contentItem?.imageLink">
+        <span *ngSwitchCase='""'><img src="https://www.bing.com/th?id=OIP.GnqZiwU7k5f_kRYkw8FNNwHaF3&w=280&h=222&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2"></span>
+        <span *ngSwitchDefault><img  src="{{contentItem?.imageLink}}" class="card-img-top" (click)="consoleMethod()" alt="..."></span>
+    </div>
+
     <div class="card-body">
         <h5 class="card-title"> <strong>Place :</strong> {{contentItem?.placeName}}({{contentItem?.Country}})</h5>
         <p *ngIf="contentItem" class="card-text "><strong> Description :</strong> {{contentItem?.discription}}.</p>
