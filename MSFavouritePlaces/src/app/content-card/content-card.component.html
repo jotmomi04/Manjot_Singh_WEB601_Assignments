@@ -5,11 +5,11 @@
     </div>
 
     <div class="card-body">
-        <h5 appHighlightImportantData class="card-title"> <strong>Place :</strong> {{contentItem?.placeName}}({{contentItem?.Country}})</h5>
+        <h5 appHighlighterImportantData class="card-title"> <strong>Place :</strong> {{contentItem?.placeName}}({{contentItem?.Country}})</h5>
         <p *ngIf="contentItem" class="card-text "><strong> Description :</strong> {{contentItem?.discription}}.</p>
-        <p><em *ngIf="contentItem?.Type" appHighlightImportantData class="type">Type: {{contentItem?.Type}}</em></p>
+        <p><em *ngIf="contentItem?.Type" appHighlighterImportantData colour="" class="type">Type: {{contentItem?.Type}}</em></p>
         <p class="hashtag" *ngIf="contentItem?.hashtag">
-            <span appHighlightImportantData *ngFor="let tag of contentItem?.hashtag">
+            <span appHighlighterImportantData *ngFor="let tag of contentItem?.hashtag">
               #{{ tag }}
             </span>
         </p>

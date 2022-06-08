@@ -9,7 +9,9 @@ import { Content } from '../models/content';
 })
 export class ContentCardComponent implements OnInit {
 @Input() contentItem?: Content;
+border='5px';
   constructor() { }
+
 consoleMethod(){
 console.log("ID :"+ this.contentItem?.id + "Rank :" + this.contentItem?.Type)
 }
