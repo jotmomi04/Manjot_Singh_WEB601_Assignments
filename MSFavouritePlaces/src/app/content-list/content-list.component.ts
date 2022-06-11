@@ -1,6 +1,7 @@
 import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Content } from '../models/content';
+import { PlacesService } from '../services/places.service';
 
 @Component({
   selector: 'app-content-list',
@@ -32,11 +33,13 @@ this.hasValue=false
 }
 
 
-constructor() {
+constructor(private placeService: PlacesService) {
    this.places=[]
    }
 
   ngOnInit(): void {
+    this.placeService.getContent().subscribe((contentArrayFromService: Content[]) => {
+      this.places = contentArrayFromService;})
   }
 
 }
