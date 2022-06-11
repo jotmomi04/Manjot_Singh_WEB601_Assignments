@@ -39,7 +39,8 @@ constructor(private placeService: PlacesService) {
 
   ngOnInit(): void {
     this.placeService.getContent().subscribe((contentArrayFromService: Content[]) => {
-      this.places = contentArrayFromService;})
-  }
+      this.places = contentArrayFromService;
+  })
 
+}
 }
