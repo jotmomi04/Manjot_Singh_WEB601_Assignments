@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Content } from './models/content';
 import { PlacesService } from './services/places.service';
 @Component({
@@ -8,6 +8,7 @@ import { PlacesService } from './services/places.service';
 })
 export class AppComponent {
   title = 'MSFavouritePlaces';
+  @Input() contentItem?: Content;
      
 
 
@@ -19,8 +20,12 @@ export class AppComponent {
   }
 
   ngOnInit(): void {
-    this.placeService.getContentItem(3).subscribe((contentItemFromService: Content) => {
+    
+  }
+  getOnePlace(id:any){
+    this.placeService.getContentItem(id).subscribe((contentItemFromService: Content) => {
       this.place = contentItemFromService;
+
   })
   }
 

@@ -1,3 +1,9 @@
 <h1>{{title}}</h1>
-<app-content-card [contentItem]="place"></app-content-card>
+
+
+
+<div class="placeBox"><input #id type="text" placeholder="Enter ID  here" name="oneplace">
+    <button (click)="getOnePlace(id.value)">Search</button></div>
+
+<app-content-card class="place" [contentItem]="place"></app-content-card>
 <app-content-list></app-content-list>
