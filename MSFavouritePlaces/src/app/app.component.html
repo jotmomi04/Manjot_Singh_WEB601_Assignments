@@ -2,7 +2,7 @@
 
 
 
-<div class="placeBox"><input #id type="text" placeholder="Enter ID  here" name="oneplace">
+<div class="placeBox"><input #id type="text" value="1" placeholder="Enter ID  here" name="oneplace">
     <button (click)="getOnePlace(id.value)">Search</button></div>
 
 <app-content-card class="place" [contentItem]="place"></app-content-card>
