@@ -7,7 +7,7 @@ import { ContentCardComponent } from './content-card/content-card.component';
 import { FilterContentPipe } from './filter-content.pipe';
 import { HighlighterImportantDataDirective } from './highlighter-important-data.directive';
 import { DetailContentComponent } from './detail-content/detail-content.component';
-
+import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +18,8 @@ import { DetailContentComponent } from './detail-content/detail-content.componen
     DetailContentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
