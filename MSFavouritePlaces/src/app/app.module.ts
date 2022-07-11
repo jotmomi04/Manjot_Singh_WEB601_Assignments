@@ -8,6 +8,7 @@ import { FilterContentPipe } from './filter-content.pipe';
 import { HighlighterImportantDataDirective } from './highlighter-important-data.directive';
 import { DetailContentComponent } from './detail-content/detail-content.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SearchPlaceComponent } from './search-place/search-place.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +16,8 @@ import { AppRoutingModule } from './app-routing.module';
     ContentCardComponent,
     FilterContentPipe,
     HighlighterImportantDataDirective,
-    DetailContentComponent
+    DetailContentComponent,
+    SearchPlaceComponent
   ],
   imports: [
     BrowserModule,
