@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Content } from '../models/content';
+import { PlacesService } from '../services/places.service';
 
 @Component({
   selector: 'app-change-content',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChangeContentComponent implements OnInit {
 
-  constructor() { }
+  contentItem: Content = {
+    placeName: "",
+    Country: ""
+  };
+  tempTags: string = '';
+  constructor(private placeService: PlacesService) { }
 
   ngOnInit(): void {
+  }
+
+  addContentToServer(): void {
+    this.contentItem.hashtag = this.tempTags.split(", ");
+    this.placeService.addContent(this.contentItem)
+      .subscribe(newContentFromServer =>
+        console.log("Success! New content added", newContentFromServer)
+      );
   }
 
 }

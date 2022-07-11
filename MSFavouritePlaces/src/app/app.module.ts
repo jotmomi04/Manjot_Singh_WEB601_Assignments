@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ContentListComponent } from './content-list/content-list.component';
 import { ContentCardComponent } from './content-card/content-card.component';
@@ -11,12 +13,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { SearchPlaceComponent } from './search-place/search-place.component';
 import { LinksComponent } from './links/links.component';
 import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
-
 //added sevices
 import { HttpClientModule } from"@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./services/in-memory-data.service";
-import { ChangeContentComponent } from './change-content/change-content.component'
+import { ChangeContentComponent } from './change-content/change-content.component';
+import { AllContentListComponent } from './all-content-list/all-content-list.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,9 +30,12 @@ import { ChangeContentComponent } from './change-content/change-content.componen
     SearchPlaceComponent,
     LinksComponent,
     BottomNavComponent,
-    ChangeContentComponent
+    ChangeContentComponent,
+    AllContentListComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

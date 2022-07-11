@@ -21,16 +21,23 @@ export class PlacesService {
     return this.http.get<Content[]>("/api/content");
   }
 
-  getContentItem(id: number):Observable<Content>{
-    return of(PLACES[id]);
+  getContentItem(id: number): Observable<Content> {
+    console.log("Now getting it from the server!");
+    return this.http.get<Content>("/api/content/" + id);
   }
-  addContentItem(content:Content):Observable<Content[]>{
-return  of (PLACES);
-  }  
-  updateContentItem(content:Content):Observable<Content[]>{
-    return  of (PLACES);
+
+  // U
+  // content item needs to have the id set correctly
+  updateContent(contentItem: Content): Observable<any> {
+    return this.http.put<any>("api/chess", contentItem, this.httpOptions);
   }
-  deleteContentItem(id:number):Observable<Content>{
+  addContent(newContentItem: Content):
+Observable<Content>{
+return this.http.post<Content>("api/content"
+,
+newContentItem, this.httpOptions)
+}
+ deleteContentItem(id:number):Observable<Content>{
     return of(PLACES[id])
   }
 

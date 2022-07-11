@@ -5,6 +5,7 @@ import { DetailContentComponent } from './detail-content/detail-content.componen
 import { ContentListComponent } from './content-list/content-list.component';
 import { SearchPlaceComponent } from './search-place/search-place.component';
 import { ChangeContentComponent } from './change-content/change-content.component';
+import { AllContentListComponent } from './all-content-list/all-content-list.component';
 
 
 
@@ -14,9 +15,14 @@ const routes: Routes = [
     redirectTo: "/list",
     pathMatch: "full",
   },
+  
+  {
+    path: "filterlist",
+    component: ContentListComponent,
+  },
   {
     path: "list",
-    component: ContentListComponent,
+    component: AllContentListComponent,
   },
   {
     path: "detail/:id",
