@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Content } from '../models/content';
+import { PlacesService } from '../services/places.service';
 
 @Component({
   selector: 'app-search-place',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPlaceComponent implements OnInit {
 
-  constructor() { }
+  place?: Content;
+
+  constructor(private placeService: PlacesService) { }
 
   ngOnInit(): void {
   }
+  getOnePlace(id:any){
+    this.placeService.getContentItem(id).subscribe((place: Content) => {
+      this.place = place;
+
+ })}
 
 }

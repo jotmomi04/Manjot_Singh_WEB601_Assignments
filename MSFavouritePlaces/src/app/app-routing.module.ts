@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { DetailContentComponent } from './detail-content/detail-content.component';
 import { ContentListComponent } from './content-list/content-list.component';
+import { SearchPlaceComponent } from './search-place/search-place.component';
 
 
 
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: "detail/:id",
     component: DetailContentComponent
+  },
+  {
+    path: "search",
+    component: SearchPlaceComponent
   },
 
 ];

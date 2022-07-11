@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-body">
-        <h5 appHighlighterImportantData colour="transparent" class="title"> <strong>Place :</strong> {{contentItem?.placeName}}({{contentItem?.Country}})</h5>
+        <h5 appHighlighterImportantData colour="transparent" class="title"> <strong>Place :</strong> <a [routerLink]="['/detail', contentItem?.id]">{{contentItem?.placeName}}({{contentItem?.Country}})</a></h5>
 
         <p><em *ngIf="contentItem?.Type" appHighlighterImportantData class="type">Type: {{contentItem?.Type}}</em></p>
     </div>
