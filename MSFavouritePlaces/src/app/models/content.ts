@@ -1,6 +1,5 @@
 export interface Content {
-
-   id: number;
+ id?: number;
   placeName : string;
   Country: string;
   Type?:string;

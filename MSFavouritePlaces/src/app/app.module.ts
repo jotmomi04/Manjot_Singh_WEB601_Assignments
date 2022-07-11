@@ -11,6 +11,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { SearchPlaceComponent } from './search-place/search-place.component';
 import { LinksComponent } from './links/links.component';
 import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
+
+//added sevices
+import { HttpClientModule } from"@angular/common/http";
+import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
+import { InMemoryDataService } from "./services/in-memory-data.service"
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +30,12 @@ import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, {
+      delay: 1000,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
