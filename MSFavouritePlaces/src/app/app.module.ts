@@ -15,7 +15,8 @@ import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
 //added sevices
 import { HttpClientModule } from"@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
-import { InMemoryDataService } from "./services/in-memory-data.service"
+import { InMemoryDataService } from "./services/in-memory-data.service";
+import { ChangeContentComponent } from './change-content/change-content.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { InMemoryDataService } from "./services/in-memory-data.service"
     DetailContentComponent,
     SearchPlaceComponent,
     LinksComponent,
-    BottomNavComponent
+    BottomNavComponent,
+    ChangeContentComponent
   ],
   imports: [
     BrowserModule,
