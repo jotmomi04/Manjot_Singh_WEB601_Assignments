@@ -9,6 +9,8 @@ import { HighlighterImportantDataDirective } from './highlighter-important-data.
 import { DetailContentComponent } from './detail-content/detail-content.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SearchPlaceComponent } from './search-place/search-place.component';
+import { LinksComponent } from './links/links.component';
+import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +19,9 @@ import { SearchPlaceComponent } from './search-place/search-place.component';
     FilterContentPipe,
     HighlighterImportantDataDirective,
     DetailContentComponent,
-    SearchPlaceComponent
+    SearchPlaceComponent,
+    LinksComponent,
+    BottomNavComponent
   ],
   imports: [
     BrowserModule,
