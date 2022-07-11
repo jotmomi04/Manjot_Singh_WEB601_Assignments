@@ -1,1 +1,18 @@
-Place:{{place?.Country}}
+<div class="card">
+    <div [ngSwitch]="place?.imageLink">
+        <span *ngSwitchCase='""'><img src="https://www.bing.com/th?id=OIP.GnqZiwU7k5f_kRYkw8FNNwHaF3&w=280&h=222&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2"></span>
+        <span *ngSwitchDefault><img  src="{{place?.imageLink}}" class="card-img-top"  alt="..."></span>
+    </div>
+
+    <div class="card-body">
+        <h5 appHighlighterImportantData colour="transparent" class="title"> <strong>Place :</strong> {{place?.placeName}}({{place?.Country}})</h5>
+        <p *ngIf="place" class="card-text "><strong> Description :</strong> {{place?.discription}}.</p>
+        <p><em *ngIf="place?.Type" appHighlighterImportantData class="type">Type: {{place?.Type}}</em></p>
+        <p class="hashtag" *ngIf="place?.hashtag">
+            <span appHighlighterImportantData *ngFor="let tag of place?.hashtag">
+              #{{ tag }}
+            </span>
+        </p>
+    </div>
+
+</div>

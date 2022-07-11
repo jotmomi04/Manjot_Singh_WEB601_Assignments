@@ -1,9 +1,4 @@
 import { Content } from "../models/content";
-export const DEFAULTPLACE: Content = {
-  id: -1,
-  placeName: "",
-  Country: ""
-}
 
 export const PLACES:Content[]=[{
     id: 1,
