@@ -62,8 +62,9 @@
     </div>
 
     <div class="row">
-        <button class="content" (click)="+(contentItem.id || 'falsy') ? updateContentOnServer(): addContentToServer()">
-       Submit 
+        <button class="content">
+                <span *ngIf="!place?.id" (click)="addContentToServer()">Add Content</span> 
+                <span *ngIf="place?.id" (click)="updateContentOnServer()">Update Content</span> 
          </button>
     </div>
 
