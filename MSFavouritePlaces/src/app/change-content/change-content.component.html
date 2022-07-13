@@ -26,7 +26,7 @@
         </div>
         <div class="col-75">
             <input type="text" [(ngModel)]="contentItem.Country" *ngIf="place?.id" placeholder="{{place?.Country}}">
-            <input type="text" [(ngModel)]="contentItem.Country" placeholder="Write the Country Of Place">
+            <input type="text" [(ngModel)]="contentItem.Country" *ngIf="!place?.id" placeholder="Write the Country Of Place">
         </div>
     </div>
     <div class="row">
@@ -34,7 +34,7 @@
             <label for="Type">Type</label>
         </div>
         <div class="col-75">
-            <input type="text" [(ngModel)]="contentItem.Type" placeholder="Write the Type Of Place">
+            <input type="text" [(ngModel)]="contentItem.Type" *ngIf="!place?.id" placeholder="Write the Type Of Place">
             <input type="text" [(ngModel)]="contentItem.Type" *ngIf="place?.id" placeholder="{{place?.Type}}">
         </div>
     </div>
@@ -44,7 +44,8 @@
             <label for="discription">Discription</label>
         </div>
         <div class="col-75">
-            <textarea [(ngModel)]="contentItem.discription" placeholder="Write something.." style="height:200px"></textarea>
+            <textarea [(ngModel)]="contentItem.discription" *ngIf="place?.id" placeholder="{{place?.discription}}" style="height:200px"></textarea>
+            <textarea [(ngModel)]="contentItem.discription" *ngIf="!place?.id" placeholder="Write something.." style="height:200px"></textarea>
         </div>
     </div>
     <div class="row">
@@ -60,7 +61,8 @@
             <label for="discription">Tags</label>
         </div>
         <div class="col-75">
-            <textarea [(ngModel)]="tempTags" placeholder="Write something.." style="height:200px"></textarea>
+            <textarea [(ngModel)]="tempTags" *ngIf="!place?.id" placeholder="Write something.." style="height:200px"></textarea>
+            <textarea [(ngModel)]="tempTags" *ngIf="place?.id" placeholder="{{place?.hashtag}}" style="height:200px"></textarea>
         </div>
     </div>
 
