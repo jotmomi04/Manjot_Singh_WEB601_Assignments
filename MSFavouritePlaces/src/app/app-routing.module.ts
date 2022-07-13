@@ -36,7 +36,7 @@ const routes: Routes = [
     component: ChangeContentComponent
   },
   {
-    path: "updateContent/1",
+    path: "updateContent/:id",
     component: ChangeContentComponent
   }
 
