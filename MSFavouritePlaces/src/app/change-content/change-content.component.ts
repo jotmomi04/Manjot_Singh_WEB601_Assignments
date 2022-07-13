@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Content } from '../models/content';
 import { PlacesService } from '../services/places.service';
 
@@ -15,10 +15,10 @@ export class ChangeContentComponent implements OnInit {
     Country: ""
   };
   id?:number;
-  place?:Content;
+  place?:Content
   
   tempTags: string = '';
-  constructor(
+  constructor(private router: Router,
     private route: ActivatedRoute
     ,private placeService: PlacesService) { }
 
@@ -29,6 +29,7 @@ export class ChangeContentComponent implements OnInit {
       this.placeService.getContentItem(this.id)
         .subscribe((place) => {
           this.place = place;
+          console.log("Id" ,this.id)
         });
     });
 
@@ -37,7 +38,7 @@ export class ChangeContentComponent implements OnInit {
   addContentToServer(): void {
 
     this.contentItem.hashtag = this.tempTags.split(", ");
-    
+    this.router.navigate(['/list'])
     this.placeService.addContent(this.contentItem)
       .subscribe(newContentFromServer =>
         console.log("Success! New content added", newContentFromServer)
@@ -46,6 +47,7 @@ export class ChangeContentComponent implements OnInit {
   updateContentOnServer(): void {
   
     this.contentItem.hashtag = this.tempTags.split(", ");
+    this.router.navigate(['/list'])
     this.placeService.updateContent(this.contentItem)
       .subscribe(() =>
         console.log("Content updated successfully", this.contentItem)
