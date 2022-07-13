@@ -29,7 +29,7 @@ export class PlacesService {
   // U
   // content item needs to have the id set correctly
   updateContent(contentItem: Content): Observable<any> {
-    return this.http.put<any>("api/chess", contentItem, this.httpOptions);
+    return this.http.put<any>("api/content", contentItem, this.httpOptions);
   }
   addContent(newContentItem: Content):
 Observable<Content>{

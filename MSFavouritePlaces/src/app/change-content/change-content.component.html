@@ -1,8 +1,16 @@
 <div class="container">
     <div class="header">
-        <h1>Add A New Place </h1>
-    </div>
+        <h1><span *ngIf="place?.id">Update A Place</span><span *ngIf="!place">Add A New Place </span></h1>
 
+    </div>
+    <div *ngIf="place" class="row">
+        <div class="col-25">
+            <label>Select Your ID </label>
+        </div>
+        <div class="col-75">
+            <input type="number" [(ngModel)]="contentItem.id" placeholder="Id">
+        </div>
+    </div>
     <div class="row">
         <div class="col-25">
             <label>Name of Place</label>
@@ -37,9 +45,26 @@
         </div>
     </div>
     <div class="row">
-        <button class="content" (click)="addContentToServer()">
-            Add New content
-          </button>
+        <div class="col-25">
+            <label for="discription">Image Link</label>
+        </div>
+        <div class="col-75">
+            <textarea [(ngModel)]="contentItem.imageLink" placeholder="Write something.." style="height:200px"></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label for="discription">Tags</label>
+        </div>
+        <div class="col-75">
+            <textarea [(ngModel)]="tempTags" placeholder="Write something.." style="height:200px"></textarea>
+        </div>
+    </div>
+
+    <div class="row">
+        <button class="content" (click)="+(contentItem.id || 'falsy') ? updateContentOnServer(): addContentToServer()">
+       Submit 
+         </button>
     </div>
 
 </div>

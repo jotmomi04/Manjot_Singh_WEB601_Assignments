@@ -34,6 +34,10 @@ const routes: Routes = [
   }, {
     path: "addContent",
     component: ChangeContentComponent
+  },
+  {
+    path: "updateContent/1",
+    component: ChangeContentComponent
   }
 
 ];
