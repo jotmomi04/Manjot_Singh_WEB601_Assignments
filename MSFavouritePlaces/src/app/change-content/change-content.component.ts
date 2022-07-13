@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Content } from '../models/content';
 import { PlacesService } from '../services/places.service';
@@ -9,6 +9,7 @@ import { PlacesService } from '../services/places.service';
   styleUrls: ['./change-content.component.scss']
 })
 export class ChangeContentComponent implements OnInit {
+  [x: string]: any;
 
   contentItem: Content = {
     placeName: "",
@@ -20,7 +21,8 @@ export class ChangeContentComponent implements OnInit {
   tempTags: string = '';
   constructor(private router: Router,
     private route: ActivatedRoute
-    ,private placeService: PlacesService) { }
+    ,private placeService: PlacesService,
+    private elm: ElementRef) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
@@ -34,6 +36,7 @@ export class ChangeContentComponent implements OnInit {
     });
 
   }
+  
 
   addContentToServer(): void {
 

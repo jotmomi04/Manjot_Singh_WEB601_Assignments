@@ -16,7 +16,8 @@
             <label>Name of Place</label>
         </div>
         <div class="col-75">
-            <input type="text" [(ngModel)]="contentItem.placeName" placeholder="Place name..">
+            <input type="text" [(ngModel)]="contentItem.placeName" *ngIf="place?.id" placeholder="{{place?.placeName}}">
+            <input type="text" [(ngModel)]="contentItem.placeName" *ngIf="!place?.id" placeholder="Enter new Place">
         </div>
     </div>
     <div class="row">
@@ -24,6 +25,7 @@
             <label for="Country">Country</label>
         </div>
         <div class="col-75">
+            <input type="text" [(ngModel)]="contentItem.Country" *ngIf="place?.id" placeholder="{{place?.Country}}">
             <input type="text" [(ngModel)]="contentItem.Country" placeholder="Write the Country Of Place">
         </div>
     </div>
@@ -33,6 +35,7 @@
         </div>
         <div class="col-75">
             <input type="text" [(ngModel)]="contentItem.Type" placeholder="Write the Type Of Place">
+            <input type="text" [(ngModel)]="contentItem.Type" *ngIf="place?.id" placeholder="{{place?.Type}}">
         </div>
     </div>
 
