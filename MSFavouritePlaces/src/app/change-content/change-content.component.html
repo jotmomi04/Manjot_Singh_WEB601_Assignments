@@ -8,7 +8,7 @@
             <label> Your ID </label>
         </div>
         <div class="col-75">
-            <input placeholder=" {{place?.id}}">
+            <input value="{{place?.id}}">
         </div>
     </div>
     <div class="row">
@@ -16,8 +16,8 @@
             <label>Name of Place</label>
         </div>
         <div class="col-75">
-            <input type="text" [(ngModel)]="contentItem.placeName" *ngIf="place?.id" placeholder="{{place?.placeName}}">
-            <input type="text" [(ngModel)]="contentItem.placeName" *ngIf="!place?.id" placeholder="Enter new Place">
+            <p *ngIf="place?.id">Current Value:- {{place?.placeName}}</p>
+            <input type="text" [(ngModel)]="contentItem.placeName" placeholder="Enter new Place">
         </div>
     </div>
     <div class="row">
@@ -25,8 +25,8 @@
             <label for="Country">Country</label>
         </div>
         <div class="col-75">
-            <input type="text" [(ngModel)]="contentItem.Country" *ngIf="place?.id" placeholder="{{place?.Country}}">
-            <input type="text" [(ngModel)]="contentItem.Country" *ngIf="!place?.id" placeholder="Write the Country Of Place">
+            <p *ngIf="place?.id">Current Value:- {{place?.Country}}</p>
+            <input type="text" [(ngModel)]="contentItem.Country" placeholder="Write the Country Of Place">
         </div>
     </div>
     <div class="row">
@@ -34,8 +34,8 @@
             <label for="Type">Type</label>
         </div>
         <div class="col-75">
-            <input type="text" [(ngModel)]="contentItem.Type" *ngIf="!place?.id" placeholder="Write the Type Of Place">
-            <input type="text" [(ngModel)]="contentItem.Type" *ngIf="place?.id" placeholder="{{place?.Type}}">
+            <p *ngIf="place?.id">Current Value:- {{place?.Type}}</p>
+            <input type="text" [(ngModel)]="contentItem.Type" placeholder="Write new Type">
         </div>
     </div>
 
@@ -44,7 +44,7 @@
             <label for="discription">Discription</label>
         </div>
         <div class="col-75">
-            <textarea [(ngModel)]="contentItem.discription" *ngIf="place?.id" placeholder="{{place?.discription}}" style="height:200px"></textarea>
+            <p *ngIf="place?.id">Current Value:- {{place?.discription}}</p>
             <textarea [(ngModel)]="contentItem.discription" *ngIf="!place?.id" placeholder="Write something.." style="height:200px"></textarea>
         </div>
     </div>
@@ -53,7 +53,12 @@
             <label for="discription">Image Link</label>
         </div>
         <div class="col-75">
-            <textarea [(ngModel)]="contentItem.imageLink" placeholder="Write something.." style="height:200px"></textarea>
+            <div *ngIf="place?.id" [ngSwitch]="place?.imageLink">
+                <span *ngSwitchCase='""'>No Imgage Found</span>
+                <span *ngSwitchDefault><img  src="{{place?.imageLink}}" class="card-img-top"  alt="..."></span>
+            </div>
+
+            <input type="text" [(ngModel)]="contentItem.imageLink" placeholder="Insert Your Link Here">
         </div>
     </div>
     <div class="row">
@@ -62,14 +67,14 @@
         </div>
         <div class="col-75">
             <textarea [(ngModel)]="tempTags" *ngIf="!place?.id" placeholder="Write something.." style="height:200px"></textarea>
-            <textarea [(ngModel)]="tempTags" *ngIf="place?.id" placeholder="{{place?.hashtag}}" style="height:200px"></textarea>
+            <p *ngIf="place?.id">Current Tags:- {{place?.hashtag}}</p>
         </div>
     </div>
 
     <div class="row">
-        <button class="content">
-                <span *ngIf="!place?.id" (click)="addContentToServer()">Add Content</span> 
-                <span *ngIf="place?.id" (click)="updateContentOnServer()">Update Content</span> 
+        <button class="content" (click)="+(place?.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">
+                <span *ngIf="!place?.id" >Add Content</span> 
+                <span *ngIf="place?.id" >Update Content</span> 
          </button>
     </div>
 
