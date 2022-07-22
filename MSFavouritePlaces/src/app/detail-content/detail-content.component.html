@@ -14,5 +14,13 @@
             </span>
         </p>
     </div>
+    <div class="buttons-wrapper">
+        <a routerLink="/list">Back to list</a>
+
+        <a> <!--  *ngIf="place.id > 0" [routerLink]="['/detail', place?.id]">-->
+          Previous player
+        </a>
+
+    </div>
 
 </div>

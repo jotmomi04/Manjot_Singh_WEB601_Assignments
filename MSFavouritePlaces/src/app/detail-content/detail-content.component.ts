@@ -12,7 +12,9 @@ export class DetailContentComponent implements OnInit {
   id?: number;
   place?: Content;
   constructor(private route: ActivatedRoute,
-    private placeService: PlacesService) { }
+    private placeService: PlacesService) { 
+      
+    }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
