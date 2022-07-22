@@ -18,7 +18,7 @@ export class DetailContentComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
-      this.id = Number(params.get("id") ?? 0);
+      this.id = Number(params.get("thing") ?? 0);
 
       this.placeService.getContentItem(this.id)
         .subscribe((place) => {

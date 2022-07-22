@@ -6,7 +6,7 @@
 
     <div class="card-body">
         <h5 appHighlighterImportantData colour="transparent" class="title"> <strong>Place :</strong> {{place?.placeName}}({{place?.Country}})</h5>
-        <p *ngIf="place" class="card-text "><strong> Description :</strong> {{place?.discription}}.</p>
+        <p *ngIf="place" class="card-text "><strong> Description :</strong> {{place.discription}}.</p>
         <p><em *ngIf="place?.Type" appHighlighterImportantData class="type">Type: {{place?.Type}}</em></p>
         <p class="hashtag" *ngIf="place?.hashtag">
             <span appHighlighterImportantData *ngFor="let tag of place?.hashtag">
@@ -17,7 +17,7 @@
     <div class="buttons-wrapper">
         <a routerLink="/list">Back to list</a>
 
-        <a> <!--  *ngIf="place.id > 0" [routerLink]="['/detail', place?.id]">-->
+        <a *ngIf="place && place.id" [routerLink]="['/detail', (place.id - 1) ]">
           Previous player
         </a>
 

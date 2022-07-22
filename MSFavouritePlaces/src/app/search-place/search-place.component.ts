@@ -14,6 +14,7 @@ export class SearchPlaceComponent implements OnInit {
   constructor(private placeService: PlacesService) { }
 
   ngOnInit(): void {
+    this.getOnePlace(1)
   }
   getOnePlace(id:any){
     this.placeService.getContentItem(id).subscribe((place: Content) => {
