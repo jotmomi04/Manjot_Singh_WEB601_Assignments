@@ -9,7 +9,7 @@ import { HighlighterImportantDataDirective } from './highlighter-important-data.
 import { DetailContentComponent } from './detail-content/detail-content.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SearchPlaceComponent } from './search-place/search-place.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +19,6 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HighlighterImportantDataDirective,
     DetailContentComponent,
     SearchPlaceComponent,
-    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
