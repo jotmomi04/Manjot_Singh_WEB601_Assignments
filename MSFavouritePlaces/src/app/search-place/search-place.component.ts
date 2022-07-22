@@ -20,5 +20,6 @@ export class SearchPlaceComponent implements OnInit {
       this.place = place;
 
  })}
+ 
 
 }

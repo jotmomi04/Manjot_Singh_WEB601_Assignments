@@ -1,3 +1,8 @@
-<div class="placeBox"><input #id type="text" value="1" placeholder="Enter ID  here" name="oneplace">
+<div class="placeBox">
+    <input autofocus #id type="number" value="1" placeholder="Enter ID  here" name="oneplace">
+
     <button (click)="getOnePlace(id.value)">Search</button></div>
-<app-content-card [contentItem]="place" class="single-item-on-app-component"></app-content-card>
+<app-content-card *ngIf="place?.id !== -1" [contentItem]="place" class="single-item-on-app-component"></app-content-card>
+<div class="error" *ngIf="place?.id === -1">
+    Error, no player at that id number
+</div>
