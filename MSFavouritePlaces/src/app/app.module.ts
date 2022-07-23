@@ -20,6 +20,8 @@ import { InMemoryDataService } from "./services/in-memory-data.service";
 import { ChangeContentComponent } from './change-content/change-content.component';
 import { AllContentListComponent } from './all-content-list/all-content-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +47,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
       delay: 1000,
     }),
     BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

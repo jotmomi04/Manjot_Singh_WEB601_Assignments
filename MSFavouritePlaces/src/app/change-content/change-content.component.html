@@ -3,9 +3,10 @@
         <h1><span *ngIf="place?.id">Update A Place</span><span *ngIf="!place">Add A New Place </span></h1>
 
     </div>
+
     <div *ngIf="place" class="row">
         <div class="col-25">
-            <label> Your ID </label>
+            <mat-label> Your ID </mat-label>
         </div>
         <div class="col-75">
             <input value="{{place?.id}}">
@@ -13,44 +14,44 @@
     </div>
     <div class="row">
         <div class="col-25">
-            <label>Name of Place</label>
+            <mat-label>Name of Place</mat-label>
         </div>
         <div class="col-75">
             <p *ngIf="place?.id">Current Value:- {{place?.placeName}}</p>
-            <input type="text" [(ngModel)]="contentItem.placeName" placeholder="Enter new Place">
+            <input matInput type="text" [(ngModel)]="contentItem.placeName" placeholder="Enter new Place">
         </div>
     </div>
     <div class="row">
         <div class="col-25">
-            <label for="Country">Country</label>
+            <mat-label for="Country">Country</mat-label>
         </div>
         <div class="col-75">
             <p *ngIf="place?.id">Current Value:- {{place?.Country}}</p>
-            <input type="text" [(ngModel)]="contentItem.Country" placeholder="Write the Country Of Place">
+            <input type="text" matInput [(ngModel)]="contentItem.Country" placeholder="Write the Country Of Place">
         </div>
     </div>
     <div class="row">
         <div class="col-25">
-            <label for="Type">Type</label>
+            <mat-label for="Type">Type</mat-label>
         </div>
         <div class="col-75">
             <p *ngIf="place?.id">Current Value:- {{place?.Type}}</p>
-            <input type="text" [(ngModel)]="contentItem.Type" placeholder="Write new Type">
+            <input type="text" matInput [(ngModel)]="contentItem.Type" placeholder="Write new Type">
         </div>
     </div>
 
     <div class="row">
         <div class="col-25">
-            <label for="discription">Discription</label>
+            <mat-label for="discription">Discription</mat-label>
         </div>
         <div class="col-75">
             <p *ngIf="place?.id">Current Value:- {{place?.discription}}</p>
-            <textarea [(ngModel)]="contentItem.discription" *ngIf="!place?.id" placeholder="Write something.." style="height:200px"></textarea>
+            <input matInput [(ngModel)]="contentItem.discription" *ngIf="!place?.id" placeholder="Write something.." style="height:200px">
         </div>
     </div>
     <div class="row">
         <div class="col-25">
-            <label for="discription">Image Link</label>
+            <mat-label for="discription">Image Link</mat-label>
         </div>
         <div class="col-75">
             <div *ngIf="place?.id" [ngSwitch]="place?.imageLink">
@@ -58,24 +59,25 @@
                 <span *ngSwitchDefault><img  src="{{place?.imageLink}}" class="card-img-top"  alt="..."></span>
             </div>
 
-            <input type="text" [(ngModel)]="contentItem.imageLink" placeholder="Insert Your Link Here">
+            <input type="text" matInput [(ngModel)]="contentItem.imageLink" placeholder="Insert Your Link Here">
         </div>
     </div>
     <div class="row">
         <div class="col-25">
-            <label for="discription">Tags</label>
+            <mat-label for="discription">Tags</mat-label>
         </div>
         <div class="col-75">
-            <textarea [(ngModel)]="tempTags" *ngIf="!place?.id" placeholder="Write something.." style="height:200px"></textarea>
+            <input [(ngModel)]="tempTags" matInput *ngIf="!place?.id" placeholder="Write something.." style="height:100px">
             <p *ngIf="place?.id">Current Tags:- {{place?.hashtag}}</p>
         </div>
     </div>
 
     <div class="row">
-        <button class="content" (click)="+(place?.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">
-                <span *ngIf="!place?.id" >Add Content</span> 
-                <span *ngIf="place?.id" >Update Content</span> 
-         </button>
+        <button mat-raised-button class="content" (click)="+(place?.id || 'falsy') ? updateContentOnServer(): addContentToServer() ">
+            <span *ngIf="!place?.id">Add Content</span>
+            <span *ngIf="place?.id">Update Content</span>
+        </button>
     </div>
+
 
 </div>
