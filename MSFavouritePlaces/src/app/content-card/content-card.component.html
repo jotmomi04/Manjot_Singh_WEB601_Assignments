@@ -1,8 +1,14 @@
-<div class="container">
-    <ul class="custom-counter">
-        <li>
-            <h3 class="title"> <strong>Place :</strong>{{contentItem?.placeName}}({{contentItem?.Country}})</h3>
-            <a class="button" [routerLink]="['/detail', contentItem?.id]">More Details</a>
-        </li>
-    </ul>
-</div>
+<mat-card class="card">
+    <mat-card-header>
+        <div mat-card-avatar class="header-image" style=" background-image: url({{contentItem?.imageLink}})"></div>
+        <mat-card-title>{{contentItem?.placeName}}</mat-card-title>
+        <mat-card-subtitle>{{contentItem?.Country}}</mat-card-subtitle>
+    </mat-card-header>
+    <div class="img" [ngSwitch]="contentItem?.imageLink">
+        <span *ngSwitchCase='""'><img mat-card-image src="" alt="....." src="https://www.bing.com/th?id=OIP.GnqZiwU7k5f_kRYkw8FNNwHaF3&w=280&h=222&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2"></span>
+        <span *ngSwitchDefault><img mat-card-image src="" alt="Photo of a {{contentItem?.placeName}}" src="{{contentItem?.imageLink}}" class="card-img-top"  ></span>
+    </div>
+    <mat-card-actions>
+        <button [routerLink]="['/detail', contentItem?.id]" mat-button> More Details</button>
+    </mat-card-actions>
+</mat-card>

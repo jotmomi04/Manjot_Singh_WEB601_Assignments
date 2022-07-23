@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SearchPlaceComponent } from './search-place/search-place.component';
 import { LinksComponent } from './links/links.component';
 import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
+import {MatCardModule} from '@angular/material/card';
 //added sevices
 import { HttpClientModule } from"@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
@@ -22,6 +23,7 @@ import { AllContentListComponent } from './all-content-list/all-content-list.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +50,8 @@ import { MatInputModule } from '@angular/material/input';
     }),
     BrowserAnimationsModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
