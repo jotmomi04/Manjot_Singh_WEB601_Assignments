@@ -18,7 +18,8 @@ import { HttpClientModule } from"@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from "./services/in-memory-data.service";
 import { ChangeContentComponent } from './change-content/change-content.component';
-import { AllContentListComponent } from './all-content-list/all-content-list.component'
+import { AllContentListComponent } from './all-content-list/all-content-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +44,7 @@ import { AllContentListComponent } from './all-content-list/all-content-list.com
       InMemoryDataService, {
       delay: 1000,
     }),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
