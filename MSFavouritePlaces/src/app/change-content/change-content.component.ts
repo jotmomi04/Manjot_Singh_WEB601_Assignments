@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Content } from '../models/content';
 import { PlacesService } from '../services/places.service';
 
+
 @Component({
   selector: 'app-change-content',
   templateUrl: './change-content.component.html',
