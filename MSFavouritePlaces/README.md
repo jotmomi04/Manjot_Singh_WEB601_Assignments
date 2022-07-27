@@ -48,6 +48,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - ### Create Component
 - Run - `npm run-script ng generate component ContentCard`
 - Run `npm run-script ng generate component ContentList`
-- 
-- 
-
+- Set all from assignment 2
+- Go to 5th assignment
+### Create Mock data
+- create file directory `data` and inside a file `mock-content.ts`
+- Place all list data into Mock content list
+- See assignment 5 contentListComponet.ts
+- Then we need to Create a service to export content
+- Run `npm run-script ng generate service services/content`
+- See assignment 5 services/service.ts
