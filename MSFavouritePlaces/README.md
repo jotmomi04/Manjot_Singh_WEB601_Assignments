@@ -31,6 +31,23 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ##start
 - Create new project Phpstrom 
 - Select AngularCli 
--Open In Vs code 
--Test Project `npm start`
--Try to change css to scss
+- Open In Vs code 
+- Test Project `npm start`
+- Try to change css to scss
+- Add `"generateinterface": "ng generate interface",
+  "generateclass": "ng generate class",
+  "generatecomponent": "ng generate component"` 
+- To package.json file
+- ### To migrate css to sccs
+- Run - `npm install schematics-scss-migrate`
+- Run `npm run-script ng g schematics-scss-migrate:scss-migrate`
+- ### create model/interface
+- Run `ng generate interface model/Content`
+- Or
+- `npm run-script generateInterface model/Content
+- ### Create Component
+- Run - `npm run-script ng generate component ContentCard`
+- Run `npm run-script ng generate component ContentList`
+- 
+- 
+
