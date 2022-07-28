@@ -82,5 +82,19 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Add httpclient module in module.ts See assignment 7
 - Change placeservice to get content from api , add http options in header
 ### Add update or add content
-- 
+- Run `npm run-script ng generate component ChangeContent
+  `
+- Add new component to the routing ` {
+  path: "addContent",
+  component: ChangeContentComponent
+  },
+  {
+  path: "updateContent/:id",
+  component: ChangeContentComponent
+  }`
+- Add button function to changeContent.ts see assignmernt - 7 
+#### create form 
+- Add formmodule in module.ts
+#### adding angular theme
+- Run `ng add @angular/material`
 
