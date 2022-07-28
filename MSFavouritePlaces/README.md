@@ -71,9 +71,16 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - ### detail content
 - add new component 
 - see assignment-6 Late
-- add route in app-rauting.module.ts
+- add route and ngmodule imports in app-rauting.module.ts
+- add Approutingmodule imports in module.ts
 - add suscribe parameter detailcontent.ts
-- add suscribing parameter to 
 - ### Adding api 
+- add `"angular-in-memory-web-api": "^0.13.0",` in package.json
+- Run  `npm install angular-in-memory-web-api@0.13.0 --save`
+- Run `npm run-script ng generate service services/InMemoryData`
+- CreteDB , Add implimemts  See assignmnet 7 inmemorydataservice.ts 
+- Add httpclient module in module.ts See assignment 7
+- Change placeservice to get content from api , add http options in header
+### Add update or add content
 - 
 
