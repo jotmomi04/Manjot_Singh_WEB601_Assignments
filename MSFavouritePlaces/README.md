@@ -57,3 +57,23 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Then we need to Create a service to export content
 - Run `npm run-script ng generate service services/content`
 - See assignment 5 services/service.ts
+- Next update Ngonit from contentList
+- add `private placeService PlaceService` to constructer
+- ### Creating a route
+- Run `ng generate module app-routing --flat`
+- Change appcomponent.html `<router-outlet></router-outlet>`
+- Open `app-routing.module.ts`
+- See assignment-6 LAte
+### for search content
+- add new componet for search 
+- see assignment-6 late
+- add route to app-routing.moudle.ts
+- ### detail content
+- add new component 
+- see assignment-6 Late
+- add route in app-rauting.module.ts
+- add suscribe parameter detailcontent.ts
+- add suscribing parameter to 
+- ### Adding api 
+- 
+
